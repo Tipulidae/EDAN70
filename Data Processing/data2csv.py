@@ -34,6 +34,7 @@ def processChunk(chunk):
 
 
 
+csv = ""
 with open('data.txt') as f:
 	data = f.read()
 	n = len(data)
@@ -44,5 +45,9 @@ with open('data.txt') as f:
 		chunk = data[pos:pos+step]
 		pos += step
 
-		print processChunk(chunk)
+		csv += processChunk(chunk) + '\n'
 		
+
+with open('output.csv','w') as f:
+	f.write(csv)
+	#print "data written to output.csv"
