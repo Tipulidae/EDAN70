@@ -63,7 +63,7 @@ with open('test.txt') as f:
 with open('data.txt','w') as f:
 	f.write(data)
 	print "data written to file:"
-	print data
+	#print data
 
 
 
