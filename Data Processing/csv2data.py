@@ -19,9 +19,11 @@ def parseTime(time):
 	global t
 	dt = int(time)-t
 	t += dt
+	if dt < 0 || dt > 131071:
+		print "WARNING! Something went wrong with dt! dt = "+str(dt)+". Proceeding anyway..."
 	msb = (dt>>8)&255
 	lsb = dt&255
-	print "msb = "+str(msb)+", lsb = "+str(lsb)
+	#print "msb = "+str(msb)+", lsb = "+str(lsb)
 	return chr(msb)+chr(lsb)
 
 def parseType(isOn):
@@ -63,11 +65,3 @@ with open('test.txt') as f:
 with open('data.txt','w') as f:
 	f.write(data)
 	print "data written to file:"
-	#print data
-
-
-
-		#print parseLine(line)
-	#for line in content:
-	#	items = [x.strip('\n\t ') for x in line.split(',')]
-		#print items[2]

@@ -1,16 +1,7 @@
-# data = open('test.txt', 'r').read()
-
-# for line in data:
-# 	print line
-
-
-
 
 t = 0
 # Track, Time, Type, Channel, Note, Velocity
 # 2, 960, Note_on_c, 1, 81, 81
-
-
 
 
 def processChunk(chunk):
@@ -50,4 +41,4 @@ with open('data.txt') as f:
 
 with open('output.csv','w') as f:
 	f.write(csv)
-	#print "data written to output.csv"
+	print "data written to output.csv"
