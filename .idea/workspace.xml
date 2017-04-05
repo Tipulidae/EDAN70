@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bdefa2c5-e5db-443d-be2b-723af540adeb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/csv_to_input.py" afterPath="$PROJECT_DIR$/python/csv_to_input.py" />
     </list>
     <ignored path="EDAN70.iws" />
     <ignored path=".idea/workspace.xml" />
