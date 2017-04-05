@@ -45,7 +45,7 @@ if __name__ == '__main__':
 				+ "1, 0, End_track\n" \
 				+ "2, 0, Start_track\n" \
 				+ "2, 0, Instrument_name_t, \"Church Organ\"\n" \
-				+ "2, 0, Program_c, 1, 19\n"
+				+ "2, 0, Program_c, 1, 0\n"
 	
 	with open(datafile) as f:
 		data = f.read()
