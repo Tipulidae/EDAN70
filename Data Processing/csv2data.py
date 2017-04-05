@@ -33,20 +33,7 @@ def parseVelocity(vel):
 	return chr(int(vel)&255)
 
 
-<<<<<<< HEAD
 
-data = ""
-with open('../csv/appass.csv') as f:
-	content = f.readlines()
-	for line in content:
-		items = [x.strip('\n\t ').lower() for x in line.split(',')]
-		if len(items) < 3:
-			continue
-		lineType = items[2]
-
-		if lineType[-2:] != '_c':
-			continue
-=======
 if __name__ == '__main__':
 
 	#print 'Number of arguments:', len(sys.argv), 'arguments.'
@@ -69,7 +56,6 @@ if __name__ == '__main__':
 
 			if lineType[-2:] != '_c':
 				continue
->>>>>>> 9b0606d15896f0135e2bf5727715f72d9ad62923
 		
 
 			if lineType == 'note_on_c':
