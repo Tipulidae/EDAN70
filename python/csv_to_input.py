@@ -1,5 +1,6 @@
 import midi2audio
 
+
 f = midi2audio.FluidSynth()
 f.play_midi("/home/stag/EDAN70/midi/bach_846.mid")
 
