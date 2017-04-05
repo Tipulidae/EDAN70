@@ -1,4 +1,6 @@
 import sys
+from os import listdir
+from os.path import isfile, join
 
 t = 0
 realTempo = 500000
@@ -54,48 +56,58 @@ def parseTempoChange(time, newtempo):
 	previousClock = time
 
 
-if __name__ == '__main__':
+def parseAllContentInFile(content):
+	global previousClock
+	global deltaT
 
-	#print 'Number of arguments:', len(sys.argv), 'arguments.'
-	#print 'Argument List:', str(sys.argv)
-	#global tempo
-	csvfile = 'test.txt'
-	datafile = 'data.txt'
+	previousClock = 0
+	deltaT = 2880
+	data = ""
+	
+	for line in content:
+		items = [x.strip('\n\t ').lower() for x in line.split(',')]
+		if len(items) < 3:
+			continue
+		lineType = items[2]
+
+		
+	
+
+		if lineType == 'note_on_c':
+			output = parseNoteOnOff(items,True)
+			#print str(items)+" -> "+output + ", length = "+str(len(output))
+			data += output
+		elif lineType == 'note_off_c':
+			output = parseNoteOnOff(items,False)
+			#print str(items)+" -> "+output + ", length = "+str(len(output))
+			data += output
+		elif lineType == 'tempo':
+			#tempo = int(items[3])
+			parseTempoChange(int(items[1]),int(items[3]))
+			#print "tempo was changed to "+str(tempo)+"!"
+		elif lineType[-2:] != '_c':
+			continue
+	
+	return data
+
+if __name__ == '__main__':
+	PATH = 'csv/'
+	datafile = 'output.data'
 	if len(sys.argv) > 2:
-		csvfile = sys.argv[1]
+		PATH = sys.argv[1]
 		datafile = sys.argv[2]
 	
 	
 	data = ""
-	with open(csvfile) as f:
-		content = f.readlines()
-		for line in content:
-			items = [x.strip('\n\t ').lower() for x in line.split(',')]
-			if len(items) < 3:
-				continue
-			lineType = items[2]
-
-			
-		
-
-			if lineType == 'note_on_c':
-				output = parseNoteOnOff(items,True)
-				#print str(items)+" -> "+output + ", length = "+str(len(output))
-				data += output
-			elif lineType == 'note_off_c':
-				output = parseNoteOnOff(items,False)
-				#print str(items)+" -> "+output + ", length = "+str(len(output))
-				data += output
-			elif lineType == 'tempo':
-				#tempo = int(items[3])
-				parseTempoChange(int(items[1]),int(items[3]))
-				print "tempo was changed to "+str(tempo)+"!"
-			elif lineType[-2:] != '_c':
-				continue
-
+	files = [f for f in listdir(PATH) if isfile(join(PATH,f))]
+	for file in files:
+		with open(join(PATH,file),'r') as f:
+			data += parseAllContentInFile(f.readlines())
+	
+	
 	with open(datafile,'w') as f:
 		f.write(data)
-		print csvfile+" parsed and data written to "+datafile+"."
+		print "Parsed "+str(len(files))+" files, output written to "+datafile+"."
 
 
 

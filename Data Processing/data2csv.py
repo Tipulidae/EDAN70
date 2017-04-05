@@ -28,23 +28,23 @@ def processChunk(chunk):
 if __name__ == '__main__':
 	
 	csvfile = 'output.csv'
-	datafile = 'data.txt'
+	datafile = 'output.data'
 	if len(sys.argv) > 2:
-		csvfile = sys.argv[1]
-		datafile = sys.argv[2]
+		datafile = sys.argv[1]
+		csvfile = sys.argv[2]
 	
 	csv = ""
 
 	header = "0, 0, Header, 1, 2, 480\n" \
 			   + "1, 0, Start_track\n" \
-				+ "1, 0, Title_t, \"Close Encounters\"\n" \
-				+ "1, 0, Text_t, \"Sample for MIDIcsv Distribution\"\n" \
-				+ "1, 0, Copyright_t, \"This file is in the public domain\"\n" \
+				+ "1, 0, Title_t, \"Training data for RNN\"\n" \
+				+ "1, 0, Text_t, \"All the music!\"\n" \
+				+ "1, 0, Copyright_t, \"This file is in the public domain (ish)\"\n" \
 				+ "1, 0, Time_signature, 4, 2, 24, 8\n" \
 				+ "1, 0, Tempo, 500000\n" \
 				+ "1, 0, End_track\n" \
 				+ "2, 0, Start_track\n" \
-				+ "2, 0, Instrument_name_t, \"Church Organ\"\n" \
+				+ "2, 0, Instrument_name_t, \"Piano\"\n" \
 				+ "2, 0, Program_c, 1, 0\n"
 	
 	with open(datafile) as f:
@@ -67,3 +67,10 @@ if __name__ == '__main__':
 		f.write(csv)
 		f.write(footer)
 		print "data written to "+csvfile
+
+
+
+
+
+
+
