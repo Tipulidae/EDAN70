@@ -1,16 +1,9 @@
-# data = open('test.txt', 'r').read()
 
-# for line in data:
-# 	print line
-
-
-
+import sys
 
 t = 0
 # Track, Time, Type, Channel, Note, Velocity
 # 2, 960, Note_on_c, 1, 81, 81
-
-
 
 
 def processChunk(chunk):
@@ -30,24 +23,47 @@ def processChunk(chunk):
 	note = str(ord(chunk[3]))
 	velocity = str(ord(chunk[4]))
 
-	return ",".join((track,time,trackType,channel,note,velocity))
+	return ", ".join((track,time,trackType,channel,note,velocity))
 
+if __name__ == '__main__':
+	
+	csvfile = 'output.csv'
+	datafile = 'data.txt'
+	if len(sys.argv) > 2:
+		csvfile = sys.argv[1]
+		datafile = sys.argv[2]
+	
+	csv = ""
 
+	header = "0, 0, Header, 1, 2, 480\n" \
+			   + "1, 0, Start_track\n" \
+				+ "1, 0, Title_t, \"Close Encounters\"\n" \
+				+ "1, 0, Text_t, \"Sample for MIDIcsv Distribution\"\n" \
+				+ "1, 0, Copyright_t, \"This file is in the public domain\"\n" \
+				+ "1, 0, Time_signature, 4, 2, 24, 8\n" \
+				+ "1, 0, Tempo, 500000\n" \
+				+ "1, 0, End_track\n" \
+				+ "2, 0, Start_track\n" \
+				+ "2, 0, Instrument_name_t, \"Church Organ\"\n" \
+				+ "2, 0, Program_c, 1, 19\n"
+	
+	with open(datafile) as f:
+		data = f.read()
+		n = len(data)
+		pos = 0
+		step = 5
+		while pos <= n-step:
 
-csv = ""
-with open('data.txt') as f:
-	data = f.read()
-	n = len(data)
-	pos = 0
-	step = 5
-	while pos <= n-step:
+			chunk = data[pos:pos+step]
+			pos += step
 
-		chunk = data[pos:pos+step]
-		pos += step
+			csv += processChunk(chunk) + '\n'
+	
+	footer = "2, "+str(t)+", End_track\n" \
+				+ "0, 0, End_of_file\n"
 
-		csv += processChunk(chunk) + '\n'
-		
-
-with open('output.csv','w') as f:
-	f.write(csv)
-	#print "data written to output.csv"
+	with open(csvfile,'w') as f:
+		f.write(header)
+		f.write(csv)
+		f.write(footer)
+		print "data written to "+csvfile
