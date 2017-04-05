@@ -1,6 +1,8 @@
-def convert(f):
-    content = open(f).readlines()
-    print content
+import midi2audio
+
+f = midi2audio.FluidSynth()
+f.play_midi("/home/stag/EDAN70/midi/bach_846.mid")
+
 
 
 #2, 0, Start_track

@@ -39,7 +39,7 @@ def parseVelocity(vel):
 
 
 data = ""
-with open('test.txt') as f:
+with open('../csv/appass.csv') as f:
 	content = f.readlines()
 	for line in content:
 		items = [x.strip('\n\t ').lower() for x in line.split(',')]
