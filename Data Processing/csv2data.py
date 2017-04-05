@@ -1,10 +1,4 @@
-# data = open('test.txt', 'r').read()
-
-# for line in data:
-# 	print line
-
-
-
+import sys
 
 t = 0
 # Track, Time, Type, Channel, Note, Velocity
@@ -19,7 +13,7 @@ def parseTime(time):
 	global t
 	dt = int(time)-t
 	t += dt
-	if dt < 0 || dt > 131071:
+	if dt < 0 or dt > 131071:
 		print "WARNING! Something went wrong with dt! dt = "+str(dt)+". Proceeding anyway..."
 	msb = (dt>>8)&255
 	lsb = dt&255
@@ -39,29 +33,43 @@ def parseVelocity(vel):
 	return chr(int(vel)&255)
 
 
+if __name__ == '__main__':
 
-data = ""
-with open('test.txt') as f:
-	content = f.readlines()
-	for line in content:
-		items = [x.strip('\n\t ').lower() for x in line.split(',')]
-		if len(items) < 3:
-			continue
-		lineType = items[2]
+	#print 'Number of arguments:', len(sys.argv), 'arguments.'
+	#print 'Argument List:', str(sys.argv)
+	csvfile = 'test.txt'
+	datafile = 'data.txt'
+	if len(sys.argv) > 2:
+		csvfile = sys.argv[1]
+		datafile = sys.argv[2]
+	
+	
+	data = ""
+	with open(csvfile) as f:
+		content = f.readlines()
+		for line in content:
+			items = [x.strip('\n\t ').lower() for x in line.split(',')]
+			if len(items) < 3:
+				continue
+			lineType = items[2]
 
-		if lineType[-2:] != '_c':
-			continue
+			if lineType[-2:] != '_c':
+				continue
 		
 
-		if lineType == 'note_on_c':
-			output = parseNoteOnOff(items,True)
-			#print str(items)+" -> "+output + ", length = "+str(len(output))
-			data += output
-		elif lineType == 'note_off_c':
-			output = parseNoteOnOff(items,False)
-			#print str(items)+" -> "+output + ", length = "+str(len(output))
-			data += output
+			if lineType == 'note_on_c':
+				output = parseNoteOnOff(items,True)
+				#print str(items)+" -> "+output + ", length = "+str(len(output))
+				data += output
+			elif lineType == 'note_off_c':
+				output = parseNoteOnOff(items,False)
+				#print str(items)+" -> "+output + ", length = "+str(len(output))
+				data += output
 
-with open('data.txt','w') as f:
-	f.write(data)
-	print "data written to file:"
+	with open(datafile,'w') as f:
+		f.write(data)
+		print csvfile+" parsed and data written to "+datafile+"."
+
+
+
+
