@@ -1,0 +1,6 @@
+*.mid
+*.csv
+*.data
+
+!csv/*.csv
+!mid/*.mid
