@@ -22,10 +22,10 @@ class Note:
 def processChunk(notes, chunk):
 	global t
 	track = "2"
-	startTimeDiff = (ord(chunk[0])<<8) + (ord(chunk[1]))
+	startTimeDiff = (ord(chunk[0])<<7) + (ord(chunk[1]))
 	t += startTimeDiff
 
-	duration = (ord(chunk[2])<<8) + (ord(chunk[3]))
+	duration = (ord(chunk[2])<<7) + (ord(chunk[3]))
 	note = str(ord(chunk[4]))
 	notes.append(Note(t,"Note_on_c",note))
 	notes.append(Note(t+duration,"Note_off_c",note))
@@ -55,7 +55,6 @@ if __name__ == '__main__':
 	notes = []
 
 	with open(datafile) as f:
-		print "hi?"
 		data = f.read()
 		n = len(data)
 		pos = 0
@@ -68,7 +67,7 @@ if __name__ == '__main__':
 			processChunk(notes,chunk)
 	
 	notes.sort(key=lambda x: x.t, reverse=False)
-	
+	t = notes[-1].t
 	footer = "2, "+str(t)+", End_track\n" \
 				+ "0, 0, End_of_file\n"
 

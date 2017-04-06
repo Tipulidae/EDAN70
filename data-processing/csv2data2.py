@@ -23,6 +23,10 @@ class Tempo:
 		self.absoluteTime += (time-self.previousClock)*self.tempo/self.realTempo
 		self.previousClock = time
 
+	def reset(self):
+		self.previousClock = 0
+		self.absoluteTime += 2880
+
 class Note:
 	def __init__(self, t, n, v):
 		self.startTime = t
@@ -71,7 +75,7 @@ def parseTempoChange(tempo, time, newTempo):
 
 
 def parseAllContentInFile(tempo, content):
-	#tempo.reset()
+	tempo.reset()
 	notes = {}
 	entries = []
 	
