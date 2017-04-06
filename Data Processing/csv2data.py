@@ -29,7 +29,7 @@ def parseTime(time):
 
 	if dt < 0 or dt > 131071:
 		print "WARNING! Something went wrong with dt! dt = "+str(dt)+". Proceeding anyway..."
-	msb = (dt>>8)&255
+	msb = (dt>>8)&127
 	lsb = dt&255
 	#print "msb = "+str(msb)+", lsb = "+str(lsb)
 	return chr(msb)+chr(lsb)
@@ -71,7 +71,7 @@ def parseAllContentInFile(content):
 		lineType = items[2]
 
 		
-	
+		f[
 
 		if lineType == 'note_on_c':
 			output = parseNoteOnOff(items,True)
