@@ -10,6 +10,7 @@ class Tempo:
 		self.tempo = 500000
 		self.previousClock = 0
 		self.absoluteTime = 0
+		self.fileStartTime = 0
 
 	def getAbsoluteTime(self, time):
 		self.handleEvent(time)
@@ -26,6 +27,7 @@ class Tempo:
 	def reset(self):
 		self.previousClock = 0
 		self.absoluteTime += 2880
+		self.fileStartTime  = self.absoluteTime
 
 class Note:
 	def __init__(self, t, n, v):
@@ -75,7 +77,7 @@ def parseTempoChange(tempo, time, newTempo):
 
 
 def parseAllContentInFile(tempo, content):
-	tempo.reset()
+	
 	notes = {}
 	entries = []
 	
@@ -96,18 +98,18 @@ def parseAllContentInFile(tempo, content):
 			continue
 	
 	entries.sort(key=lambda x: x.startTime, reverse=False)
-	t = 0
+	t = tempo.fileStartTime
 	data = ""
 	for note in entries:
 		data += parseTime(note.startTime-t)+parseTime(note.duration)+parseNote2(note.note)
 		#print str(note.startTime-t) + " - " + str(note.duration) + " - " + note.note
 		t = note.startTime
 
-		
+	tempo.reset()
 	#print data
 	return data
 
-
+ 
 
 if __name__ == '__main__':
 	PATH = 'csv/'
