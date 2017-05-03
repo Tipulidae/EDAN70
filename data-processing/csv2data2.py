@@ -1,6 +1,9 @@
 import sys
+import matplotlib.pyplot as plt
+import numpy as np
 from os import listdir
 from os.path import isfile, join
+
 
 
 class Tempo:
@@ -107,9 +110,15 @@ def parseAllContentInFile(tempo, content):
 
 	tempo.reset()
 	#print data
+	
+	"""
+	ds = np.array(map(lambda x: x.duration, entries))
+	plt.hist(ds, bins='auto')
+	plt.show()"""
+
 	return data
 
- 
+
 
 if __name__ == '__main__':
 	PATH = 'csv/'
@@ -130,7 +139,9 @@ if __name__ == '__main__':
 	with open(datafile,'w') as f:
 		f.write(data)
 		print "Parsed "+str(len(files))+" files, output written to "+datafile+"."
-
+	
+	
+	
 
 
 
