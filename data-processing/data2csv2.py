@@ -35,6 +35,13 @@ def processChunk(notes, chunk):
 	notes.append(Note(t+duration,"Note_off_c",note))
 
 
+def processChunk2(d, chunk):
+	if chunk in d:
+		d[chunk] = d[chunk]+1
+	else:
+		d[chunk] = 1
+
+
 
 
 if __name__ == '__main__':
@@ -50,7 +57,7 @@ if __name__ == '__main__':
 				+ "1, 0, Text_t, \"All the music!\"\n" \
 				+ "1, 0, Copyright_t, \"This file is in the public domain (ish)\"\n" \
 				+ "1, 0, Time_signature, 4, 2, 24, 8\n" \
-				+ "1, 0, Tempo, 500000\n" \
+				+ "1, 0, Tempo, 50000000\n" \
 				+ "1, 0, End_track\n" \
 				+ "2, 0, Start_track\n" \
 				+ "2, 0, Instrument_name_t, \"Piano\"\n" \
@@ -58,6 +65,8 @@ if __name__ == '__main__':
 	
 	notes = []
 
+	words = dict()
+	wordCount = 0
 	with open(datafile) as f:
 		data = f.read()
 		n = len(data)
@@ -67,8 +76,17 @@ if __name__ == '__main__':
 
 			chunk = data[pos:pos+step]
 			pos += step
+			if chunk in words:
+				words[chunk] = words[chunk] + 1
+			else:
+				words[chunk] = 1
 
+			wordCount += 1
 			processChunk(notes,chunk)
+	
+	print "distinct words: {}".format(len(words.values()))
+	print "total word count: {}".format(wordCount)
+		
 	
 	notes.sort(key=lambda x: x.t, reverse=False)
 	t = notes[-1].t
@@ -82,8 +100,8 @@ if __name__ == '__main__':
 		#f.write(csv)
 		f.write(footer)
 		print "data written to "+csvfile
-
-
+	
+	
 
 
 
