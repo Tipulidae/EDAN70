@@ -1,6 +1,6 @@
 import sys
-import matplotlib.pyplot as plt
-import numpy as np
+#import matplotlib.pyplot as plt
+#import numpy as np
 from os import listdir
 from os.path import isfile, join
 
@@ -133,7 +133,7 @@ if __name__ == '__main__':
 	files = [f for f in listdir(PATH) if isfile(join(PATH,f))]
 	for file in files:
 		with open(join(PATH,file),'r') as f:
-			data = parseAllContentInFile(tempo, f.readlines())
+			data += parseAllContentInFile(tempo, f.readlines())
 	
 	
 	with open(datafile,'w') as f:

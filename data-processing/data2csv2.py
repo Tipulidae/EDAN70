@@ -23,9 +23,13 @@ def processChunk(notes, chunk):
 	global t
 	track = "2"
 	startTimeDiff = (ord(chunk[0])<<7) + (ord(chunk[1]))
+	if startTimeDiff > 0:
+		startTimeDiff = 60
 	t += startTimeDiff
 
 	duration = (ord(chunk[2])<<7) + (ord(chunk[3]))
+	#if duration > 2880:
+	#	duration = 2880
 	note = str(ord(chunk[4]))
 	notes.append(Note(t,"Note_on_c",note))
 	notes.append(Note(t+duration,"Note_off_c",note))
