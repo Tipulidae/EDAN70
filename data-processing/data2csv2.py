@@ -21,10 +21,13 @@ class Note:
 
 def processChunk(notes, chunk):
 	global t
+
+	if len(chunk) != 5:
+		print "invalid chunk length: "+str(len(chunk))
+		return
+
 	track = "2"
 	startTimeDiff = (ord(chunk[0])<<7) + (ord(chunk[1]))
-	#if startTimeDiff > 0:
-	#	startTimeDiff = 60
 	t += startTimeDiff
 
 	duration = (ord(chunk[2])<<7) + (ord(chunk[3]))
@@ -35,14 +38,22 @@ def processChunk(notes, chunk):
 	notes.append(Note(t+duration,"Note_off_c",note))
 
 
-def processChunk2(d, chunk):
-	if chunk in d:
-		d[chunk] = d[chunk]+1
+def processChunk2(notes, chunk):
+	global t
+	
+	if len(chunk) == 5:
+		track = "2"
+		dt = int(chunk[0])
+		t += dt
+		duration = int(chunk[1])
+		note = chunk[2]
+		notes.append(Note(t,"Note_on_c",note))
+		notes.append(Note(t+duration,"Note_off_c",note))
 	else:
-		d[chunk] = 1
+		print "invalid chunk length: "+str(len(chunk))
 
 
-
+"dt;duration;note;-dt;duration;note;-"
 
 if __name__ == '__main__':
 	csvfile = 'output.csv'
@@ -57,7 +68,11 @@ if __name__ == '__main__':
 				+ "1, 0, Text_t, \"All the music!\"\n" \
 				+ "1, 0, Copyright_t, \"This file is in the public domain (ish)\"\n" \
 				+ "1, 0, Time_signature, 4, 2, 24, 8\n" \
+<<<<<<< HEAD
 				+ "1, 0, Tempo, 5000000\n" \
+=======
+				+ "1, 0, Tempo, 500000\n" \
+>>>>>>> 7bda18aa2c268b976048626cd40507cc1a5fd336
 				+ "1, 0, End_track\n" \
 				+ "2, 0, Start_track\n" \
 				+ "2, 0, Instrument_name_t, \"Piano\"\n" \
@@ -69,6 +84,9 @@ if __name__ == '__main__':
 	wordCount = 0
 	with open(datafile) as f:
 		data = f.read()
+		for chunk in data.split(chr(1)):
+			processChunk(notes,chunk)
+		"""
 		n = len(data)
 		pos = 0
 		step = 5
@@ -83,9 +101,10 @@ if __name__ == '__main__':
 
 			wordCount += 1
 			processChunk(notes,chunk)
+		"""
 	
-	print "distinct words: {}".format(len(words.values()))
-	print "total word count: {}".format(wordCount)
+	#print "distinct words: {}".format(len(words.values()))
+	#print "total word count: {}".format(wordCount)
 		
 	
 	notes.sort(key=lambda x: x.t, reverse=False)
