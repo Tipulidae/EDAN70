@@ -10,7 +10,7 @@ from os.path import isfile, join
 class Tempo:
 	
 	def __init__(self):
-		self.realTempo = 50000000
+		self.realTempo = 500000
 		self.tempo = 500000
 		self.previousClock = 0
 		self.absoluteTime = 0
@@ -105,7 +105,8 @@ def parseAllContentInFile(tempo, content):
 	t = tempo.fileStartTime
 	data = ""
 	for note in entries:
-		data += parseTime(note.startTime-t)+parseTime(note.duration)+parseNote2(note.note)
+		data += ';'.join(map(str,[note.startTime-t,note.duration,note.note]))+";-"
+		#data += parseTime(note.startTime-t)+parseTime(note.duration)+parseNote2(note.note)
 		#print str(note.startTime-t) + " - " + str(note.duration) + " - " + note.note
 		t = note.startTime
 
@@ -119,7 +120,7 @@ def parseAllContentInFile(tempo, content):
 
 	return data
 
-
+"dt;duration;note;-dt;duration;note;-"
 
 if __name__ == '__main__':
 	PATH = 'csv/'

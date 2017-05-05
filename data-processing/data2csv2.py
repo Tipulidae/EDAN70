@@ -23,8 +23,6 @@ def processChunk(notes, chunk):
 	global t
 	track = "2"
 	startTimeDiff = (ord(chunk[0])<<7) + (ord(chunk[1]))
-	if startTimeDiff > 0:
-		startTimeDiff = 60
 	t += startTimeDiff
 
 	duration = (ord(chunk[2])<<7) + (ord(chunk[3]))
@@ -36,13 +34,21 @@ def processChunk(notes, chunk):
 
 
 def processChunk2(d, chunk):
-	if chunk in d:
-		d[chunk] = d[chunk]+1
+	global t
+	
+	if len(chunk) == 3:
+		track = "2"
+		dt = int(chunk[0])
+		t += dt
+		duration = int(chunk[1])
+		note = chunk[2]
+		notes.append(Note(t,"Note_on_c",note))
+		notes.append(Note(t+duration,"Note_off_c",note))
 	else:
-		d[chunk] = 1
+		print "invalid chunk length: "+str(len(chunk))
 
 
-
+"dt;duration;note;-dt;duration;note;-"
 
 if __name__ == '__main__':
 	csvfile = 'output.csv'
@@ -69,6 +75,9 @@ if __name__ == '__main__':
 	wordCount = 0
 	with open(datafile) as f:
 		data = f.read()
+		for chunk in data.split('-'):
+			processChunk2(notes,chunk)
+		"""
 		n = len(data)
 		pos = 0
 		step = 5
@@ -83,9 +92,10 @@ if __name__ == '__main__':
 
 			wordCount += 1
 			processChunk(notes,chunk)
+		"""
 	
-	print "distinct words: {}".format(len(words.values()))
-	print "total word count: {}".format(wordCount)
+	#print "distinct words: {}".format(len(words.values()))
+	#print "total word count: {}".format(wordCount)
 		
 	
 	notes.sort(key=lambda x: x.t, reverse=False)
