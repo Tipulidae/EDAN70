@@ -80,7 +80,7 @@ if __name__ == '__main__':
 	wordCount = 0
 	with open(datafile) as f:
 		data = f.read()
-		for chunk in data.split(chr(1)):
+		for chunk in data.split(chr(128)):
 			processChunk(notes,chunk)
 		"""
 		n = len(data)

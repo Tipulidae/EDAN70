@@ -80,8 +80,8 @@ def parseTempoChange(tempo, time, newTempo):
 	tempo.changeTempoEvent(time,newTempo)
 
 def validate(b):
-	if b == chr(1):
-		return chr(0)
+	if b == chr(128):
+		return chr(127)
 	else:
 		return b
 
@@ -112,7 +112,7 @@ def parseAllContentInFile(tempo, content):
 	data = ""
 	for note in entries:
 		#data += ';'.join(map(str,[note.startTime-t,note.duration,note.note]))+";-"
-		data += parseTime(note.startTime-t)+parseTime(note.duration)+parseNote2(note.note)+chr(1)
+		data += parseTime(note.startTime-t)+parseTime(note.duration)+parseNote2(note.note)+chr(128)
 		#print str(note.startTime-t) + " - " + str(note.duration) + " - " + note.note
 		t = note.startTime
 
