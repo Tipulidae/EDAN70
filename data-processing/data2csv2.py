@@ -36,7 +36,7 @@ def processChunk(notes, chunk):
 def processChunk2(d, chunk):
 	global t
 	
-	if len(chunk) == 3:
+	if len(chunk) == 4:
 		track = "2"
 		dt = int(chunk[0])
 		t += dt
@@ -76,7 +76,7 @@ if __name__ == '__main__':
 	with open(datafile) as f:
 		data = f.read()
 		for chunk in data.split('-'):
-			processChunk2(notes,chunk)
+			processChunk2(notes,chunk.split(';'))
 		"""
 		n = len(data)
 		pos = 0
