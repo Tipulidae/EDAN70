@@ -80,10 +80,10 @@ def parseTempoChange(tempo, time, newTempo):
 	tempo.changeTempoEvent(time,newTempo)
 
 def validate(b):
-	if b == chr(1):
-		return chr(0)
-	else:
-		return b
+	#if b == chr(1):
+	#	return chr(0)
+	#else:
+	return b
 
 
 def parseAllContentInFile(tempo, content):

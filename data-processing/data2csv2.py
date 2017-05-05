@@ -68,11 +68,7 @@ if __name__ == '__main__':
 				+ "1, 0, Text_t, \"All the music!\"\n" \
 				+ "1, 0, Copyright_t, \"This file is in the public domain (ish)\"\n" \
 				+ "1, 0, Time_signature, 4, 2, 24, 8\n" \
-<<<<<<< HEAD
-				+ "1, 0, Tempo, 5000000\n" \
-=======
 				+ "1, 0, Tempo, 500000\n" \
->>>>>>> 7bda18aa2c268b976048626cd40507cc1a5fd336
 				+ "1, 0, End_track\n" \
 				+ "2, 0, Start_track\n" \
 				+ "2, 0, Instrument_name_t, \"Piano\"\n" \
