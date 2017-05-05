@@ -23,8 +23,8 @@ def processChunk(notes, chunk):
 	global t
 	track = "2"
 	startTimeDiff = (ord(chunk[0])<<7) + (ord(chunk[1]))
-	if startTimeDiff > 0:
-		startTimeDiff = 60
+	#if startTimeDiff > 0:
+	#	startTimeDiff = 60
 	t += startTimeDiff
 
 	duration = (ord(chunk[2])<<7) + (ord(chunk[3]))
@@ -57,7 +57,7 @@ if __name__ == '__main__':
 				+ "1, 0, Text_t, \"All the music!\"\n" \
 				+ "1, 0, Copyright_t, \"This file is in the public domain (ish)\"\n" \
 				+ "1, 0, Time_signature, 4, 2, 24, 8\n" \
-				+ "1, 0, Tempo, 50000000\n" \
+				+ "1, 0, Tempo, 5000000\n" \
 				+ "1, 0, End_track\n" \
 				+ "2, 0, Start_track\n" \
 				+ "2, 0, Instrument_name_t, \"Piano\"\n" \

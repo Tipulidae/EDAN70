@@ -10,7 +10,7 @@ from os.path import isfile, join
 class Tempo:
 	
 	def __init__(self):
-		self.realTempo = 50000000
+		self.realTempo = 5000000
 		self.tempo = 500000
 		self.previousClock = 0
 		self.absoluteTime = 0

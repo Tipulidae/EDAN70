@@ -2,289 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdefa2c5-e5db-443d-be2b-723af540adeb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_esp1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_esp2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_esp3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_esp4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_esp5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_esp6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_se1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_se2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_se3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_se4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_se5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_se6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_se7_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/alb_se8_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/appass2.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bach_846_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bach_847_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bach_850_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bor_ps1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bor_ps1_format4.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bor_ps2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bor_ps3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bor_ps4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bor_ps5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bor_ps6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/bor_ps7_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/br_im2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/br_im5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/br_im6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/br_rhap_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/brahms_opus117_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/brahms_opus117_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/brahms_opus1_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/brahms_opus1_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/brahms_opus1_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/brahms_opus1_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/burg_erwachen_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/burg_geschwindigkeit_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/burg_gewitter_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/burg_perlen_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/burg_quelle_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/burg_spinnerlied_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/burg_sylphen_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/burg_trennung_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chp_op18_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chp_op31_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p10_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p11_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p12_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p13_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p14_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p15_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p16_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p17_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p18_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p19_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p20_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p21_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p22_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p23_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p24_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p7_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p8_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn-p9_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op10_e01_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op10_e05_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op10_e12_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op23_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op25_e11_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op25_e12_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op25_e1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op25_e2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op25_e3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op25_e4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op27_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op27_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op33_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op33_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op35_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op35_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op35_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op35_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op53_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op66_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op7_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/chpn_op7_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_1_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_1_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_1_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_2_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_2_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_2_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_3_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_3_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_3_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_4_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_4_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_4_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_5_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_5_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_5_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_6_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/clementi_opus36_6_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/deb_clai_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/deb_menu_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/deb_pass_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/deb_prel_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/debussy_cc_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/debussy_cc_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/debussy_cc_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/debussy_cc_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/debussy_cc_5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/debussy_cc_6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/fruehlingsrauschen_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/god_alb_esp2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/god_chpn_op10_e01_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/gra_esp_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/gra_esp_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/gra_esp_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_album_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_berceuse_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_brooklet_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_butterfly_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_elfentanz_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_halling_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_kobold_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_march_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_once_upon_a_time_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_spring_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_voeglein_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_waechter_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_walzer_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_wanderer_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_wedding_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/grieg_zwerge_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/hay_40_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/hay_40_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_33_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_33_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_33_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_35_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_35_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_35_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_43_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_43_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_43_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_7_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_7_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_7_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_8_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_8_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_8_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_8_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_9_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_9_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/haydn_9_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/islamei_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_donjuan_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_et1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_et2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_et3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_et4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_et5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_et6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_et_trans4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_et_trans5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_et_trans8_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_liebestraum_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_rhap02_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_rhap09_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_rhap10_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_rhap12_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/liz_rhap15_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op19_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op19_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op19_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op19_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op19_5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op19_6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op30_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op30_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op30_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op30_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op30_5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op53_5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op62_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op62_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mendel_op62_5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/mos_op36_6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/muss_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/muss_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/muss_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/muss_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/muss_5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/muss_6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/muss_7_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/muss_8_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/rac_op23_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/rac_op23_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/rac_op23_5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/rac_op23_7_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/rac_op32_13_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/rac_op32_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/rac_op33_5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/rac_op33_6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/rac_op33_8_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/rac_op3_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ravel_miroirs_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schu_143_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schu_143_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schu_143_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schub_d760_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schub_d760_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schub_d760_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schub_d760_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schub_d960_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schub_d960_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schub_d960_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schub_d960_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schubert_D850_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schubert_D850_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schubert_D850_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schubert_D850_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schubert_D935_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schubert_D935_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schubert_D935_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schubert_D935_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schuim-1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schuim-2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schuim-3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schuim-4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schum_abegg_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schumm-1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schumm-2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schumm-3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schumm-4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schumm-5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/schumm-6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_10_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_11_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_12_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_13_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_7_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_8_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn15_9_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn16_1_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn16_2_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn16_3_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn16_4_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn16_5_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn16_6_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn16_7_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn16_8_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn68_10_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/scn68_12_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_april_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_august_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_dezember_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_februar_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_januar_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_juli_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_juni_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_maerz_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_mai_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_november_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_oktober_format0.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/ty_september_format0.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_rnn.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/char-rnn" afterPath="$PROJECT_DIR$/char-rnn" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data-processing/convert_csv.py" afterPath="$PROJECT_DIR$/data-processing/convert_csv.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data-processing/csv2data2.py" afterPath="$PROJECT_DIR$/data-processing/csv2data2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data-processing/data2csv2.py" afterPath="$PROJECT_DIR$/data-processing/data2csv2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample.csv" afterPath="$PROJECT_DIR$/sample.csv" />
     </list>
     <ignored path="EDAN70.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -319,7 +42,7 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data-processing/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1797">
+            <state relative-caret-position="2250">
               <caret line="152" column="40" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -328,13 +51,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="convert_csv.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="convert_csv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data-processing/convert_csv.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_rnn.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_rnn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -363,13 +98,14 @@
         <option value="$PROJECT_DIR$/tensorflow.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/data-processing/convert_csv.py" />
+        <option value="$PROJECT_DIR$/test_rnn.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="303" />
-    <option name="y" value="137" />
-    <option name="width" value="1334" />
+    <option name="x" value="945" />
+    <option name="y" value="150" />
+    <option name="width" value="975" />
     <option name="height" value="912" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -397,6 +133,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -417,8 +155,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -671,18 +407,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="303" y="137" width="1334" height="912" extended-state="0" />
-    <editor active="false" />
+    <frame x="945" y="150" width="975" height="912" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29610196" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28615385" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38590202" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38590202" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -702,6 +438,36 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/data-processing/csv2data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="98" column="4" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-processing/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2280">
+          <caret line="152" column="40" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data-processing/convert_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data-processing/csv2data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
@@ -761,7 +527,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data-processing/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1797">
+        <state relative-caret-position="2250">
           <caret line="152" column="40" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -769,28 +535,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tensorflow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tensorflow.py" />
+    <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/data-processing/convert_csv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_rnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
