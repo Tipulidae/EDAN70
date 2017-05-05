@@ -68,16 +68,22 @@ def parseTime(t):
 		print "WARNING! Something went wrong with dt! dt = "+str(t)+". Proceeding anyway..."
 	msb = (t>>7)&127
 	lsb = t&127
-	return chr(msb)+chr(lsb)
+	return validate(chr(msb))+validate(chr(lsb))
 
 def parseNote2(note):
-	return chr(int(note)&127)
+	return validate(chr(int(note)&127))
 
 def parseVelocity(vel):
-	return chr(int(vel)&127)
+	return validate(chr(int(vel)&127))
 
 def parseTempoChange(tempo, time, newTempo):
 	tempo.changeTempoEvent(time,newTempo)
+
+def validate(b):
+	if b == chr(1):
+		return chr(0)
+	else:
+		return b
 
 
 def parseAllContentInFile(tempo, content):
@@ -105,8 +111,8 @@ def parseAllContentInFile(tempo, content):
 	t = tempo.fileStartTime
 	data = ""
 	for note in entries:
-		data += ';'.join(map(str,[note.startTime-t,note.duration,note.note]))+";-"
-		#data += parseTime(note.startTime-t)+parseTime(note.duration)+parseNote2(note.note)
+		#data += ';'.join(map(str,[note.startTime-t,note.duration,note.note]))+";-"
+		data += parseTime(note.startTime-t)+parseTime(note.duration)+parseNote2(note.note)+chr(1)
 		#print str(note.startTime-t) + " - " + str(note.duration) + " - " + note.note
 		t = note.startTime
 

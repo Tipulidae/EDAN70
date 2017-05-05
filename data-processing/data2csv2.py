@@ -21,6 +21,11 @@ class Note:
 
 def processChunk(notes, chunk):
 	global t
+
+	if len(chunk) != 5:
+		print "invalid chunk length: "+str(len(chunk))
+		return
+
 	track = "2"
 	startTimeDiff = (ord(chunk[0])<<7) + (ord(chunk[1]))
 	t += startTimeDiff
@@ -33,10 +38,10 @@ def processChunk(notes, chunk):
 	notes.append(Note(t+duration,"Note_off_c",note))
 
 
-def processChunk2(d, chunk):
+def processChunk2(notes, chunk):
 	global t
 	
-	if len(chunk) == 4:
+	if len(chunk) == 5:
 		track = "2"
 		dt = int(chunk[0])
 		t += dt
@@ -63,7 +68,7 @@ if __name__ == '__main__':
 				+ "1, 0, Text_t, \"All the music!\"\n" \
 				+ "1, 0, Copyright_t, \"This file is in the public domain (ish)\"\n" \
 				+ "1, 0, Time_signature, 4, 2, 24, 8\n" \
-				+ "1, 0, Tempo, 50000000\n" \
+				+ "1, 0, Tempo, 500000\n" \
 				+ "1, 0, End_track\n" \
 				+ "2, 0, Start_track\n" \
 				+ "2, 0, Instrument_name_t, \"Piano\"\n" \
@@ -75,8 +80,8 @@ if __name__ == '__main__':
 	wordCount = 0
 	with open(datafile) as f:
 		data = f.read()
-		for chunk in data.split('-'):
-			processChunk2(notes,chunk.split(';'))
+		for chunk in data.split(chr(1)):
+			processChunk(notes,chunk)
 		"""
 		n = len(data)
 		pos = 0
