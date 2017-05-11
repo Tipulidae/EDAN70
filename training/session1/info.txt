@@ -1,0 +1,2 @@
+All träningsdata (329 filer)
+Större nätverk: rnn_size = 256, 3 hidden layers, 150 seq length
