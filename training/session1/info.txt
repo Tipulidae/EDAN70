@@ -1,0 +1,6 @@
+All träningsdata (329 filer)
+Större nätverk: rnn_size=256, num_layers=3, seq_length=150
+encoding:		[dt][dt][Tone][dt][dt]
+
+train_loss:
+e24 ~0.75

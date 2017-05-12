@@ -1,68 +1,99 @@
 import sys
 from os import listdir
+from os import walk
 from os.path import isfile, join
 
-t = 0
-realTempo = 500000
-tempo = 500000
-# Track, Time, Type, Channel, Note, Velocity
-# 2, 960, Note_on_c, 1, 81, 81
-# In header, assuming division = 480..
-
-previousClock = 0
-deltaT = 0
 
 
 
-def parseNoteOnOff(note,isOn):
-	return parseTime(int(note[1])) + parseType(isOn) + parseNote(note[4]) + parseVelocity(note[5])
-
-def parseTime(time):
-	global previousClock
-	global tempo
-	global realTempo
-	global deltaT
+class Tempo:
 	
-	dt = deltaT + (time-previousClock)*tempo/realTempo
-	previousClock = time
-	deltaT = 0
+	def __init__(self):
+		self.realTempo = 500000
+		self.tempo = 500000
+		self.previousClock = 0
+		self.absoluteTime = 0
+		self.fileStartTime = 0
 
-	if dt < 0 or dt > 131071:
-		print "WARNING! Something went wrong with dt! dt = "+str(dt)+". Proceeding anyway..."
-	msb = (dt>>8)&127
-	lsb = dt&255
-	#print "msb = "+str(msb)+", lsb = "+str(lsb)
-	return chr(msb)+chr(lsb)
+	def getAbsoluteTime(self, time):
+		self.handleEvent(time)
+		return self.absoluteTime
 
-def parseType(isOn):
-	if isOn:
-		return chr(1)
+	def changeTempoEvent(self, time, newTempo):
+		self.handleEvent(time)
+		self.tempo = newTempo
+
+	def handleEvent(self, time):
+		self.absoluteTime += (time-self.previousClock)*self.tempo/self.realTempo
+		self.previousClock = time
+
+	def reset(self):
+		self.previousClock = 0
+		self.absoluteTime += 2880
+		self.fileStartTime  = self.absoluteTime
+
+class Note:
+	def __init__(self, t, n, v):
+		self.startTime = t
+		self.duration = 0
+		self.note = n
+		self.velocity = v
+
+
+	def turnOff(self, t):
+		self.duration = t-self.startTime
+
+	def toData(self,t,datatype):
+		if datatype == 'd1':
+			return timeToData(self.startTime-t)+timeToData(self.duration)+noteToData(self.note)+chr(128)
+		else:
+			return ''
+
+
+
+
+def parseNoteEvent(tempo, notes, items):
+	t = tempo.getAbsoluteTime(int(items[1]))
+	lineType = items[2]
+	note = items[4]
+	velocity = int(items[5])
+	
+	if lineType == 'note_on_c' and velocity > 0:
+		notes[note] = Note(t,note,velocity)
+	elif note in notes:
+		notes[note].turnOff(t)
+		return notes[note]
+
+	return None
+	
+
+def timeToData(t):
+	if t < 0 or t > 32767:
+		print 'WARNING! Something went wrong with dt! dt = '+str(t)+'. Proceeding anyway...'
+	msb = (t>>7)&127
+	lsb = t&127
+	return validate(chr(msb))+validate(chr(lsb))
+
+def noteToData(note):
+	return validate(chr(int(note)&127))
+
+def velocityToData(vel):
+	return validate(chr(int(vel)&127))
+
+def parseTempoChange(tempo, time, newTempo):
+	tempo.changeTempoEvent(time,newTempo)
+
+def validate(b):
+	if b == chr(128):
+		return chr(127)
 	else:
-		return chr(0)
-
-def parseNote(note):
-	return chr(int(note)&255)
-
-def parseVelocity(vel):
-	return chr(int(vel)&255)
-
-def parseTempoChange(time, newtempo):
-	global deltaT
-	global tempo
-	global previousClock
-	global realTempo
-	deltaT += (time-previousClock)*tempo/realTempo
-	tempo = newtempo
-	previousClock = time
+		return b
 
 
-def parseAllContentInFile(content):
-	global previousClock
-	global deltaT
-
-	previousClock = 0
-	deltaT = 2880
-	data = ""
+def parseAllContentInFile(tempo, content, datatype):
+	
+	notes = {}
+	entries = []
 	
 	for line in content:
 		items = [x.strip('\n\t ').lower() for x in line.split(',')]
@@ -70,45 +101,52 @@ def parseAllContentInFile(content):
 			continue
 		lineType = items[2]
 
-		
-		f[
 
-		if lineType == 'note_on_c':
-			output = parseNoteOnOff(items,True)
-			#print str(items)+" -> "+output + ", length = "+str(len(output))
-			data += output
-		elif lineType == 'note_off_c':
-			output = parseNoteOnOff(items,False)
-			#print str(items)+" -> "+output + ", length = "+str(len(output))
-			data += output
+		if lineType in ['note_on_c', 'note_off_c']:
+			n = parseNoteEvent(tempo, notes, items)
+			if n is not None:
+				entries.append(n)
 		elif lineType == 'tempo':
-			#tempo = int(items[3])
-			parseTempoChange(int(items[1]),int(items[3]))
-			#print "tempo was changed to "+str(tempo)+"!"
+			parseTempoChange(tempo,int(items[1]),int(items[3]))
 		elif lineType[-2:] != '_c':
 			continue
 	
+	entries.sort(key=lambda x: x.startTime, reverse=False)
+	t = tempo.fileStartTime
+	data = ''
+	for note in entries:
+		data += note.toData(t,datatype)
+		t = note.startTime
+
+	tempo.reset()
+
 	return data
 
-if __name__ == '__main__':
-	PATH = 'csv/'
-	datafile = 'output.data'
-	if len(sys.argv) > 2:
-		PATH = sys.argv[1]
-		datafile = sys.argv[2]
-	
-	
-	data = ""
-	files = [f for f in listdir(PATH) if isfile(join(PATH,f))]
-	for file in files:
-		with open(join(PATH,file),'r') as f:
-			data += parseAllContentInFile(f.readlines())
-	
-	
-	with open(datafile,'w') as f:
-		f.write(data)
-		print "Parsed "+str(len(files))+" files, output written to "+datafile+"."
 
+if __name__ == '__main__':
+	INPUT = 'csv/'
+	OUTPUT = 'output'
+	datatype = 'd1'
+	if len(sys.argv) > 3:
+		INPUT = sys.argv[1]
+		OUTPUT = sys.argv[2]
+		datatype = sys.argv[3]
+	
+	data = ''
+	tempo = Tempo()
+	fileCount = 0
+	for root,subdirs,files in walk(INPUT):
+		for csvfile in files:
+			with open(join(root,csvfile),'r') as f:
+				data += parseAllContentInFile(tempo, f.readlines(),datatype)
+				fileCount += 1
+	
+	with open(OUTPUT+'.'+datatype,'w') as f:
+		f.write(data)
+		print 'Parsed '+str(fileCount)+' files, output written to '+OUTPUT+'.'+datatype+'.'
+	
+	
+	
 
 
 

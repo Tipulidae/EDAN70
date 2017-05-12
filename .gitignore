@@ -1,6 +1,4 @@
 *.mid
-*.csv
 *.data
 
-!csv/*.csv
 !midi/*.mid

@@ -1,0 +1,17 @@
+om inget annat anges gäller: seq_length=150, layers=2, rnn_size=128, mellanstor datamängd
+
+session1		viktor	stort nätverk
+session2					mellanstor datamängd
+session3					bara beethoven
+session4					bara mozart
+session5					blandat, datamängd lika stort som mozart/beethoven
+session6a				transponera all data, träna på allt
+session7					velocity
+session8					composer
+session9					relativa toner (delta note)
+
+(session6b	samma som a, men med större nätverk?)
+
+följande sessions kan vara intressanta att köra med varierande datastorlek, beroende på resultat. börja med mellan.
+
+
