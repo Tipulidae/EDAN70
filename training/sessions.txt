@@ -8,7 +8,10 @@ session5					blandat, datamängd lika stort som mozart/beethoven
 session6a				transponera all data, träna på allt
 session7					velocity
 session8					composer
-session9					relativa toner (delta note)
+session9					velocity+composer
+session10				relativa toner (delta note)
+session11				stort nätverk, mellanstor datamängd
+
 
 (session6b	samma som a, men med större nätverk?)
 

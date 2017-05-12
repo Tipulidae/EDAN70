@@ -7,14 +7,15 @@ t = 0
 class Note:
 	track = "2"
 	channel = "1"
-	velocity = "68"
+	
 	def __init__(self, time, trackType, note):
 		self.t = time
 		self.trackType = trackType
 		self.note = note
+		self.velocity = "68"
 
 	def toString(self):
-		return ", ".join((Note.track,str(self.t),self.trackType,Note.channel,self.note,Note.velocity))
+		return ", ".join((Note.track,str(self.t),self.trackType,Note.channel,self.note,self.velocity))
 
 
 
@@ -36,8 +37,20 @@ def processChunk(notes, chunk, datatype):
 	duration = (ord(chunk[2])<<7) + (ord(chunk[3]))
 
 	note = str(ord(chunk[4]))
-	notes.append(Note(t,"Note_on_c",note))
-	notes.append(Note(t+duration,"Note_off_c",note))
+	noteOn = Note(t,"Note_on_c",note)
+	noteOff = Note(t+duration,"Note_off_c",note)
+
+	if datatype in ['d2','d4']:
+		noteOn.velocity = str(ord(chunk[5]))
+
+	if datatype == 'd3':
+		print "Composer: "+str(ord(chunk[5]))
+	elif datatype == 'd4':
+		print "Composer: "+str(ord(chunk[6]))
+
+
+	notes.append(noteOn)
+	notes.append(noteOff)
 
 
 
