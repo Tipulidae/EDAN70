@@ -38,6 +38,7 @@ class Note:
 		self.duration = 0
 		self.note = n
 		self.velocity = v
+		self.composer = 0
 
 
 	def turnOff(self, t):
@@ -46,6 +47,13 @@ class Note:
 	def toData(self,t,datatype):
 		if datatype == 'd1':
 			return timeToData(self.startTime-t)+timeToData(self.duration)+noteToData(self.note)+chr(128)
+		elif datatype == 'd2':
+			return timeToData(self.startTime-t)+timeToData(self.duration)+noteToData(self.note)+velocityToData(self.velocity)+chr(128)
+		elif datatype == 'd3':
+			return timeToData(self.startTime-t)+timeToData(self.duration)+noteToData(self.note)+composerToData(self.composer)+chr(128)
+		elif datatype == 'd4':
+			return (timeToData(self.startTime-t)+timeToData(self.duration)+noteToData(self.note)+
+				velocityToData(self.velocity)+composerToData(self.composer)+chr(128))
 		else:
 			return ''
 
@@ -80,6 +88,9 @@ def noteToData(note):
 def velocityToData(vel):
 	return validate(chr(int(vel)&127))
 
+def composerToData(comp):
+	return validate(chr(int(comp)&127))
+
 def parseTempoChange(tempo, time, newTempo):
 	tempo.changeTempoEvent(time,newTempo)
 
@@ -90,10 +101,25 @@ def validate(b):
 		return b
 
 
-def parseAllContentInFile(tempo, content, datatype):
+
+
+def parseAllContentInFile(tempo, content, datatype, filename):
 	
 	notes = {}
+	composerNames = ['albeniz','bach','balakirew','beethoven',
+			'borodin','brahms','burgmueller','buergmueller','chopin','clementi','debussy','godowsky',
+			'granados','grieg','haydn','liszt','mendelssohn','moszkowski','mozart',
+			'mussorgsky','mussorgski','rachmaninov','rachmaninow','rachmaninoff','ravel','schubert','schumann','sinding',
+			'tchaikovsky','tschaikowsky']
+	composers = {name: False for name in composerNames}
+	composerId = {composerNames[i]: i for i in range(len(composerNames))}
+	composerId['buergmueller'] = composerId['burgmueller']
+	composerId['mussorgski'] = composerId['mussorgsky']
+	composerId['rachmaninow'] = composerId['rachmaninoff'] = composerId['rachmaninov']
+	composerId['tschaikowsky'] = composerId['tchaikovsky']
 	entries = []
+
+	composer = 0
 	
 	for line in content:
 		items = [x.strip('\n\t ').lower() for x in line.split(',')]
@@ -108,9 +134,18 @@ def parseAllContentInFile(tempo, content, datatype):
 				entries.append(n)
 		elif lineType == 'tempo':
 			parseTempoChange(tempo,int(items[1]),int(items[3]))
+		elif lineType in ['text_t','title_t']:
+			for w in items[3].split(' '):
+				w = w.strip('":.,')
+				if w in composers:
+					composers[w] = True
+					composer = composerId[w]
 		elif lineType[-2:] != '_c':
 			continue
 	
+	for note in entries:
+		note.composer = composer
+
 	entries.sort(key=lambda x: x.startTime, reverse=False)
 	t = tempo.fileStartTime
 	data = ''
@@ -119,6 +154,10 @@ def parseAllContentInFile(tempo, content, datatype):
 		t = note.startTime
 
 	tempo.reset()
+
+	#print str(sum(composers.values()))
+	if sum(composers.values()) != 1:
+		print 'WARNING: Composer not recognized for file '+filename
 
 	return data
 
@@ -138,7 +177,7 @@ if __name__ == '__main__':
 	for root,subdirs,files in walk(INPUT):
 		for csvfile in files:
 			with open(join(root,csvfile),'r') as f:
-				data += parseAllContentInFile(tempo, f.readlines(),datatype)
+				data += parseAllContentInFile(tempo, f.readlines(),datatype,join(root,csvfile))
 				fileCount += 1
 	
 	with open(OUTPUT+'.'+datatype,'w') as f:
