@@ -1,0 +1,6 @@
+Data: 		Beethoven
+Nätverk:	Default - (128,2,150seq)
+Epocher:	50
+Tid:		~6h
+Train loss:	~0.85
+
