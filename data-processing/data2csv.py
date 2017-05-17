@@ -3,7 +3,6 @@ import sys
 
 t = 0
 
-
 class Note:
 	track = "2"
 	channel = "1"
@@ -18,10 +17,57 @@ class Note:
 		return ", ".join((Note.track,str(self.t),self.trackType,Note.channel,self.note,self.velocity))
 
 
-
-def processChunk(notes, chunk, datatype):
-	global t
+class Composer:
+	info = ""
+	previousComposer = "no one"
 	
+	def __init__(self):
+		self.composerNames = {0:'albeniz',
+			 1:'bach',
+			 2:'balakirew',
+			 3:'beethoven',
+			 4:'borodin',
+			 5:'brahms',
+			 6:'burgmueller',
+			 8:'chopin',
+			 9:'clementi',
+			10:'debussy',
+			11:'godowsky',
+			12:'granados',
+			13:'grieg',
+			14:'haydn',
+			15:'liszt',
+			16:'mendelssohn',
+			17:'moszkowski',
+			18:'mozart',
+			19:'mussorgsky',
+			21:'rachmaninov',
+			24:'ravel',
+			25:'schubert',
+			26:'schumann',
+			27:'sinding',
+			28:'tchaikovsky',
+			29:'tschaikowsky'}
+	
+	def addComposerInfo(self,compId,timeInSeconds):
+		if compId in self.composerNames:
+			newComposer = self.composerNames[compId]
+		else:
+			newComposer = "invalid composer "+str(compId)
+
+		if newComposer != self.previousComposer:
+			m,s = divmod(timeInSeconds,60)
+			h,m = divmod(m,60)
+			theTime = "%d:%02d:%02d"%(h,m,s)
+			self.info += "Composer changed at "+theTime+" from "+self.previousComposer+" to "+newComposer+"\n"
+			self.previousComposer = newComposer
+	
+	def printInfo(self):
+		return self.info
+
+def processChunk(notes, chunk, datatype, composer):
+	global t	
+
 	n = len(chunk)
 	if (datatype in ['d1'] and n != 5 or 
 			datatype in ['d2', 'd3'] and n != 6 or
@@ -43,14 +89,20 @@ def processChunk(notes, chunk, datatype):
 	if datatype in ['d2','d4']:
 		noteOn.velocity = str(ord(chunk[5]))
 
-	if datatype == 'd3':
-		print "Composer: "+str(ord(chunk[5]))
-	elif datatype == 'd4':
-		print "Composer: "+str(ord(chunk[6]))
+	
 
+
+	compId = None
+	timeInSeconds = (t-startTimeDiff)*0.5/480
+	
+	if datatype == 'd3':
+		composer.addComposerInfo(ord(chunk[5]),timeInSeconds)
+	elif datatype == 'd4':
+		composer.addComposerInfo(ord(chunk[6]),timeInSeconds)
 
 	notes.append(noteOn)
 	notes.append(noteOff)
+
 
 
 
@@ -76,15 +128,16 @@ if __name__ == '__main__':
 				+ "2, 0, Program_c, 1, 0\n"
 	
 	notes = []
-
 	words = dict()
 	wordCount = 0
+
+	composer = Composer()
+	
 	with open(datafile) as f:
 		data = f.read()
 		for chunk in data.split(chr(128)):
-			processChunk(notes,chunk,datatype)
+			processChunk(notes,chunk,datatype,composer)
 
-		
 	
 	notes.sort(key=lambda x: x.t, reverse=False)
 	t = notes[-1].t
@@ -99,8 +152,13 @@ if __name__ == '__main__':
 		f.write(footer)
 		print "data written to "+csvfile
 	
-	
 
+	print composer.info
+	if composer.info:
+		with open(csvfile+'.ci','w') as f:
+			f.write(composer.info)
+			print "composer info written to "+csvfile+".ci."
+	
 
 
 

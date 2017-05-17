@@ -12,6 +12,11 @@ session9		viktor			velocity+composer
 session10				relativa toner (delta note)
 session11				stort nätverk, mellanstor datamängd
 
+session3b						samma som 3, men med format .d4
+session4b						samma som 4, men med format .d4
+session5b						samma som 5, men med format .d4
+
+session12						d4, all data (large.d4)
 
 (session6b	samma som a, men med större nätverk?)
 
