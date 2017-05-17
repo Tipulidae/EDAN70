@@ -1,7 +1,7 @@
 #!/bin/bash
 echo 'sample.sh checkpoint output; change PATH in script'
 
-SAMPLE_PATH=~/EDAN70/char-rnn/
+SAMPLE_PATH=~/char-rnn/
 DATA2CSV_PATH=~/EDAN70/data-processing/data2csv.py
 OUTPUT_PATH="${2:-sample.wav}"
 

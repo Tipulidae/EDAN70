@@ -3,8 +3,8 @@ om inget annat anges gäller: seq_length=150, layers=2, rnn_size=128, mellanstor
 session1		viktor	stort nätverk
 session2		viktor			mellanstor datamängd
 session3		viktor			bara beethoven
-session4					bara mozart
-session5					blandat, datamängd lika stort som mozart/beethoven
+session4		viktor			bara mozart
+session5		viktor			blandat, datamängd lika stort som mozart/beethoven
 session6a				transponera all data, träna på allt
 session7					velocity
 session8					composer
