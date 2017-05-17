@@ -6,9 +6,9 @@ session3		viktor			bara beethoven
 session4		viktor			bara mozart
 session5		viktor			blandat, datamängd lika stort som mozart/beethoven
 session6a				transponera all data, träna på allt
-session7					velocity
-session8					composer
-session9					velocity+composer
+session7		viktor			velocity
+session8		viktor			composer
+session9		viktor			velocity+composer
 session10				relativa toner (delta note)
 session11				stort nätverk, mellanstor datamängd
 
