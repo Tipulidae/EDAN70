@@ -1,0 +1,12 @@
+Composer changed at 0:00:00 from no one to mozart
+Composer changed at 0:04:04 from mozart to beethoven
+Composer changed at 0:04:04 from beethoven to mozart
+Composer changed at 0:05:26 from mozart to invalid composer 73
+Composer changed at 0:05:26 from invalid composer 73 to mozart
+Composer changed at 0:07:04 from mozart to haydn
+Composer changed at 0:07:04 from haydn to mozart
+Composer changed at 0:08:08 from mozart to beethoven
+Composer changed at 0:08:42 from beethoven to haydn
+Composer changed at 0:11:34 from haydn to invalid composer 55
+Composer changed at 0:11:34 from invalid composer 55 to invalid composer 47
+Composer changed at 0:11:34 from invalid composer 47 to haydn
