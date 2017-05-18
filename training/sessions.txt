@@ -20,6 +20,8 @@ session12						d4, all data (large.d4)
 
 (session6b	samma som a, men med större nätverk?)
 
+session13				learning_rate_decay 0.6 litet nätverk [64/2/50], liten data
+
 följande sessions kan vara intressanta att köra med varierande datastorlek, beroende på resultat. börja med mellan.
 
 
