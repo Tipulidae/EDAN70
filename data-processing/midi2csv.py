@@ -29,10 +29,13 @@ else:
 count = 0
 for subdir, dirs, files in os.walk(rootdir):
 	for midifile in files:
-		midipath = join(subdir, midifile)
-		csvpath = join(subdir, midifile[:-3] + "csv")
-		cmd = 'midicsv "{}" "{}"'.format(midipath, csvpath)
-		subprocess.call(shlex.split(cmd))
-		count += 1
+		file = midifile.split(".")
+		if file[-1].lower().lstrip() == "mid":
+			print 'path is %s . %s' % (file[0], file[-1])
+			midipath = join(subdir, midifile)
+			csvpath = join(subdir, file[0] + ".csv")
+			cmd = 'midicsv "{}" "{}"'.format(midipath, csvpath)
+			subprocess.call(shlex.split(cmd))
+			count += 1
 
 print 'converted {} files.'.format(count)
