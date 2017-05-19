@@ -2,3 +2,4 @@
 *.data
 
 !midi/*.mid
+!more_midi/*.mid
