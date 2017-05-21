@@ -1,5 +1,6 @@
 #!/bin/bash
-echo 'sample.sh checkpoint output; change PATH in script'
+echo 'sample.sh checkpoint [output] [data_type] [temp] [seed]
+echo change PATH in script'
 
 SAMPLE_PATH=~/EDAN70/char-rnn/
 DATA2CSV_PATH=~/EDAN70/data-processing/data2csv.py
