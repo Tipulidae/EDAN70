@@ -5,11 +5,13 @@ SAMPLE_PATH=~/EDAN70/char-rnn/
 DATA2CSV_PATH=~/EDAN70/data-processing/data2csv.py
 OUTPUT_PATH="${2:-sample.mp3}"
 data_file=sample."${3:-d1}"
+temperature="${4:-1}"
+seed="${5:-123}"
 
 echo $data_file
 
 cd $SAMPLE_PATH
-th sample.lua $1 -length 50000 > $data_file;
+th sample.lua $1 -length 50000 -seed $seed -temperature $temperature > $data_file;
 
 python $DATA2CSV_PATH $data_file sample.csv
 csvmidi sample.csv sample.mid
