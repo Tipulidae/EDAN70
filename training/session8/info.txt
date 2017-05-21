@@ -1,0 +1,5 @@
+Data: 		Mellanstor.d3
+Nätverk:	Default - (128,2,150seq)
+Epocher:	50
+Tid:		~5h
+Val. loss:	1.01	

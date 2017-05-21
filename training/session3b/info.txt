@@ -1,0 +1,5 @@
+Data: 		Beethoven.d2
+Nätverk:	Default - (128,2,150seq)
+Epocher:	26
+Tid:		~2h
+Val. loss:	~0.75

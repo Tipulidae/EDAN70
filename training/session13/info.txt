@@ -1,0 +1,6 @@
+Data: 		Mellanstor
+Nätverk:	Small - (64,2,150seq)
+Epocher:	13
+Tid:		~0.5h
+
+Jämförning av Training Loss vid lägre learning rate (ungefär lika hoppigt)
