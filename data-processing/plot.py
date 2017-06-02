@@ -4,6 +4,8 @@ import numpy as np
 from collections import OrderedDict as od
 from matplotlib import pyplot as plt
 
+''' Plots all training and validation losses for
+	a checkpoint created by Karpathy's char-rnn. ''' 
 
 if len(sys.argv) > 2:
 	path = sys.argv[1]

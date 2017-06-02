@@ -1,4 +1,13 @@
 #!/bin/bash
+
+# Samples a checkpoint created by Karpathy's char-rnn
+# 	[output] : path to output file
+#	[data_type] : data representation used to train the network
+#	[temp] : temperature [0.0 - 1.0]
+#	[seed] : random seed to sample with [0 - 125]
+
+# Change path to theano-theano and data-processing files manually
+
 echo 'sample.sh checkpoint [output] [data_type] [temp] [seed]
 echo change PATH in script'
 
